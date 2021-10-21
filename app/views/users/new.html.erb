@@ -8,6 +8,12 @@
             <%= f.label :name %>
             <%= f.text_field :name, class: "form-control" %>
 
+            <%= f.label :gender %>
+            <%= f.select :gender, options_for_select(["Chọn giới tính",["Nam","Nam"],["Nữ","Nu"],["N/A","N/A"]]), {:class => "form-control"} %>
+            
+            <%= f.label :age %>
+            <%= f.text_field :age, class: "form-control" %>
+
             <%= f.label :email %>
             <%= f.email_field :email, class: "form-control" %>
 

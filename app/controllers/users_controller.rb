@@ -1,9 +1,18 @@
 class UsersController < ApplicationController
   def show
-    begin
+    # begin
+    #   @user = User.find(params[:id])
+    # rescue ActiveRecord::RecordNotFound => exception
+    #   flash[:success] = "User not found"  
+    #   render "static_pages/home"    #neu khong tim thay id se tra ve trang home
+    # end
+
+    if(User.find_by_id(params[:id]).nil?)
+      flash.now[:alert] = "User not found"
+      render "static_pages/home"
+    else
       @user = User.find(params[:id])
-    rescue ActiveRecord::RecordNotFound => exception
-      render "static_pages/home"    #neu khong tim thay id se tra ve trang home
+      # redirect_to @user
     end
     # debugger
   end
@@ -26,7 +35,7 @@ class UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                  :password_confirmation)
+                                  :password_confirmation, :age, :gender)
       # tra ve 1 version params hash voi cac attributes trong permit
       # va se phat sinh error neu :user attribute loi
     end
