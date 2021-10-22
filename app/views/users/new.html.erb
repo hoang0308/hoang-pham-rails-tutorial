@@ -9,9 +9,8 @@
             <%= f.text_field :name, class: "form-control" %>
 
             <%= f.label :gender %>
-            <%= f.select :gender, options_for_select(["Select your gender",
-                    ["Male","Male"],["Female","Feamale"],["N/A","N/A"]]), :class => "form-control" %>
-            
+            <%= f.select :gender, User.genders.keys, class: "form-control" %>
+
             <%= f.label :date %>
             <%= f.date_field :age, :placeholder => 'dd/mm/yyyy', class: "form-control" %>
 
@@ -20,10 +19,10 @@
 
             <%= f.label :password %>
             <%= f.password_field :password, class: "form-control" %>
-
+        
             <%= f.label :password_confirmation, "Confirmation" %>
             <%= f.password_field :password_confirmation,  class: "form-control" %>
-            
+
             <%= f.submit "Create my account", class: "btn btn-primary" %>
         <% end %>
     </div>

@@ -1,18 +1,11 @@
 class UsersController < ApplicationController
   def show
-    # begin
-    #   @user = User.find(params[:id])
-    # rescue ActiveRecord::RecordNotFound => exception
-    #   flash[:success] = "User not found"  
-    #   render "static_pages/home"    #neu khong tim thay id se tra ve trang home
-    # end
-
-    if(User.find_by_id(params[:id]).nil?)
+    id = params[:id]
+    if(User.find_by_id(id).nil?)
       flash.now[:alert] = "User not found"
       render "static_pages/home"
     else
-      @user = User.find(params[:id])
-      # redirect_to @user
+      @user = User.find(id)
     end
     # debugger
   end
@@ -21,7 +14,6 @@ class UsersController < ApplicationController
     @user = User.new
   end
   def create
-    # @user = User.new(params[:user]) # not the final implementation
     @user = User.new user_params
     if @user.save
       flash[:success] = "Welcome to the Sample App!"
