@@ -9,10 +9,11 @@
             <%= f.text_field :name, class: "form-control" %>
 
             <%= f.label :gender %>
-            <%= f.select :gender, options_for_select(["Chọn giới tính",["Nam","Nam"],["Nữ","Nu"],["N/A","N/A"]]), {:class => "form-control"} %>
+            <%= f.select :gender, options_for_select(["Select your gender",
+                    ["Male","Male"],["Female","Feamale"],["N/A","N/A"]]), :class => "form-control" %>
             
-            <%= f.label :age %>
-            <%= f.text_field :age, class: "form-control" %>
+            <%= f.label :date %>
+            <%= f.date_field :age, :placeholder => 'dd/mm/yyyy', class: "form-control" %>
 
             <%= f.label :email %>
             <%= f.email_field :email, class: "form-control" %>
