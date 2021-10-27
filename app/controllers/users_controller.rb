@@ -1,11 +1,9 @@
 class UsersController < ApplicationController
   def show
-    id = params[:id]
-    if(User.find_by_id(id).nil?)
+    @user = User.find_by id: params[:id]
+    if(@user.nil?)
       flash.now[:alert] = "User not found"
       render "static_pages/home"
-    else
-      @user = User.find(id)
     end
     # debugger
   end
