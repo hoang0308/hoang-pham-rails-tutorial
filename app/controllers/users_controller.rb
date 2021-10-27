@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user   # ~ redirect_to user_url(@user)
     else
@@ -30,6 +31,7 @@ class UsersController < ApplicationController
                                   :password_confirmation, :age, :gender)
       # tra ve 1 version params hash voi cac attributes trong permit
       # va se phat sinh error neu :user attribute loi
+      params.require(:user).permit(:name, :email, :password, :password_confirmation, :age, :gender)
     end
 
 end
