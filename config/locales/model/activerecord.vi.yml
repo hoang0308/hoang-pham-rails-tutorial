@@ -1,0 +1,24 @@
+vi:
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            name:
+              blank: "không được để trống"
+              too_long: "quá dài"
+            gender:
+              blank: "không được để trống"
+            age:
+              blank: "không được để trống"
+            email:
+              blank: "không được để trống"
+              invalid: "không hợp lệ"
+              taken: "đã tồn tại"
+              too_long: "quá dài"
+            password:
+              blank: "không được để trống"
+              too_short: "quá ngắn"
+            password_confirmation:
+              confirmation: "không khớp"
+
