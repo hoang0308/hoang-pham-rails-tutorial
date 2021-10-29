@@ -1,0 +1,20 @@
+vi:
+  users:
+    new:
+      title: "Đăng nhập"
+      lable_name: "Tên"
+      lable_gender: "Giới tính"
+      lable_date: "Ngày sinh"
+      lable_password: "Mật khẩu"
+      lable_confirmation: "Xác nhận"
+      btn_create: "Tạo tài khoản"
+  static_pages:
+    home:
+      title: "Trang chủ"
+    contact:
+      title: "Liên hệ"
+    help:
+      title: "Giúp đỡ" 
+  shared:
+    errors: "Biểu mẫu bao gồm %{num} lỗi"
+

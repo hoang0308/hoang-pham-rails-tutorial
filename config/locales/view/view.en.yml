@@ -1,0 +1,20 @@
+en:
+  users:
+    new:
+      title: "Login"
+      lable_name: "Name"
+      lable_gender: "Gender"
+      lable_date: "Date"
+      lable_password: "Password"
+      lable_confirmation: "Confirmation"
+      btn_create: "Create my account"
+  static_pages:
+    home:
+      title: "Home"
+    contact:
+      title: "Contact"
+    help:
+      title: "Help" 
+  shared:
+    errors: "The form has %{num} errors"
+
