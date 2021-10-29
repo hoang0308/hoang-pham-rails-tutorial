@@ -1,24 +1,22 @@
 class User < ApplicationRecord
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
-    enum genders: [ "Male", "Female", "N/A" ] 
+    enum genders: [ "Male", "Female", "N/A" ]
 
-    validates :name, presence: true,length: {maximum: 50}  #presence: true không được để trống
-    validates :email, presence: true,length: {maximum: 255},
+    validates :name, presence: true,length: {maximum: Settings.name_maximum}  #presence: true không được để trống
+    validates :age, presence: true
+    validate :age_limit
+    validates :email, presence: true,length: {maximum: Settings.email_maximum},
         format: { with: VALID_EMAIL_REGEX },
         #uniqueness: {case_sensitive: false} #khong phan biet chu hoa va chu thuong
         uniqueness: true
-    
-    validates :password, presence: true, length: {minimum: 6}
-    validates :age, presence: true
-    validate :age_limit
-
-    before_save :downcase_email
-
+    validates :password, length: {minimum: Settings.password_minimum}
     has_secure_password
+    
+    before_save :downcase_email
 
     private
 
-        def age_limit 
+        def age_limit
             if self.age
                 age = Date.today.year - self.age.year
                 if(age>100 || age<18)
@@ -26,4 +24,5 @@ class User < ApplicationRecord
                 end
             end
         end
+
 end
