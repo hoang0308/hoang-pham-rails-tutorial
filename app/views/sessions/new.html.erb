@@ -7,12 +7,12 @@
             <%= f.label :email %>
             <%= f.email_field :email, class: "form-control" %>
 
-            <%= f.label :password %>
+            <%= f.label :password, t(".label_password") %>
             <%= f.password_field :password, class: "form-control"%>
 
-            <%= f.submit "Log in", class: "btn btn-primary" %>
+            <%= f.submit t(".btn_login"), class: "btn btn-primary" %>
         <% end %>
 
-        <p>New user? <%= link_to "Sig up now!", sigup_path %></p>
+        <p> <%= t(".t1") %> <%= link_to t(".btn_sigup"), sigup_path %></p>
     </div>
 </div>

@@ -1,20 +1,39 @@
 en:
+  layouts:
+    header:
+      btn_home: "Home"
+      btn_help: "Help"
+      btn_user: "User"
+      btn_logout: "Log out"
+      btn_login: "Log in"
+      btn_account: "Account"
+      btn_profile: "Profile"
+      btn_setting: "Setting"
   users:
     new:
       title: "Login"
-      lable_name: "Name"
-      lable_gender: "Gender"
-      lable_date: "Date"
-      lable_password: "Password"
-      lable_confirmation: "Confirmation"
+      label_name: "Name"
+      label_gender: "Gender"
+      label_date: "Date"
+      label_password: "Password"
+      label_confirmation: "Confirmation"
       btn_create: "Create my account"
+    footer:
+      btn_about: "About"
+      btn_contact: "Contact"
+      btn_news: "News"
   static_pages:
     home:
       title: "Home"
+      btn_sigup: "Sig up now!"
     contact:
       title: "Contact"
     help:
       title: "Help" 
   shared:
     errors: "The form has %{num} errors"
-
+  sessions:
+    new:
+      t1: "New user?"
+      btn_login: "Log in"
+      btn_sigup: "Sig up now!"
