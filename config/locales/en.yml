@@ -1,1 +1,9 @@
 en:
+  users:
+    show:
+      error: "User not found"
+  sessions:
+    create:
+      error: "Invalid email/password combination"
+    destroy:
+      error: "You are not logged in"
