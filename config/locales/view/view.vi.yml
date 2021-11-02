@@ -1,0 +1,45 @@
+vi:
+  layouts:
+    header:
+      btn_home: "Trang chủ"
+      btn_help: "Giúp đỡ"
+      btn_user: "Người dùng"
+      btn_logout: "Đăng xuất"
+      btn_login: "Đăng nhập"
+      btn_account: "Tài khoản"
+      btn_profile: "Thông tin"
+      btn_setting: "Cài đặt"
+    footer:
+      btn_about: "Thông tin"
+      btn_contact: "Liên hệ"
+      btn_news: "Tin tức"
+  users:
+    new:
+      title: "Đăng nhập"
+      label_name: "Tên"
+      label_gender: "Giới tính"
+      label_date: "Ngày sinh"
+      label_password: "Mật khẩu"
+      label_confirmation: "Xác nhận"
+      btn_create: "Tạo tài khoản"
+  static_pages:
+    home:
+      title: "Trang chủ"
+      btn_sigup: "Đăng kí ngay!"
+    contact:
+      title: "Liên hệ"
+    help:
+      title: "Giúp đỡ" 
+  shared:
+    errors: "Biểu mẫu bao gồm %{num} lỗi"
+  sessions:
+    new:
+      t1: "Bạn có phải người mới không?"
+      btn_login: "Đăng nhập"
+      btn_sigup: "Đăng kí ngay!"
+      label_password: "Mật khẩu"
+<<<<<<< HEAD
+      check_box_remember: "Nhớ đăng nhập trên máy này"
+=======
+
+>>>>>>> chapter8

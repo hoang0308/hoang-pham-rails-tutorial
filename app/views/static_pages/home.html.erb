@@ -1,11 +1,11 @@
-<% provide(:title, "Home") %>
+<% provide(:title, t(".title")) %>
 <div class="center jumbotron">
     <h1>Welcome to the Sample App</h1>
     <h2>This is the home page for the
         <a href="#">Ruby on Rails Tutorial</a>
         sample application.
     </h2>
-    <%= link_to "Sign up now!" , sigup_path ,class: "btn btn-lg btn-primary"%>
+    <%= link_to t(".btn_sigup") , sigup_path ,class: "btn btn-lg btn-primary"%>
 </div>
 <img src="https://rubyonrails.org/images/rails-logo.svg" alt="Logo rails" width="200px">
 

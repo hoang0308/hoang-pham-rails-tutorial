@@ -3,19 +3,21 @@ class SessionsController < ApplicationController
   end
 
   def create
-    user = User.find_by(email: params[:session][:email.downcase])
+    user = User.find_by email: params[:session][:email.downcase]
     if user && user.authenticate(params[:session][:password])
       log_in user
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)   #neu = 1 thi goi remember(user) neu khong thi goi forget(user)
       redirect_to user  #chuyển hướng đến trang user
     else
-      flash.now[:danger] = 'Invalid email/password combination'
+      flash.now[:danger] = t(".error")
       render :new
     end
   end
 
   def destroy
-    log_out
+    unless log_out
+      flash[:danger] = t(".error")
+    end
     redirect_to root_url
   end
 end
