@@ -5,3 +5,5 @@ vi:
   sessions:
     create:
       error: "Sai email hoặc mật khẩu"
+    destroy:
+      error: "Bạn chưa đăng nhập"

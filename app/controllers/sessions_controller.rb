@@ -14,7 +14,9 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-    log_out
+    unless log_out
+      flash[:danger] = t(".error")
+    end
     redirect_to root_url
   end
 end

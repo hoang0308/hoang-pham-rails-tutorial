@@ -4,8 +4,13 @@ module SessionsHelper
     end
     
     def log_out
-        session.delete(:user_id)
-        current_user = nil
+        if  session[:user_id]
+            session.delete(:user_id)
+            current_user = nil
+            return true
+        else
+            return false
+        end
     end
 
     def current_user
