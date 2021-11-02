@@ -14,14 +14,16 @@ vi:
       btn_contact: "Liên hệ"
       btn_news: "Tin tức"
   users:
-    new:
-      title: "Đăng nhập"
-      label_name: "Tên"
-      label_gender: "Giới tính"
-      label_date: "Ngày sinh"
-      label_password: "Mật khẩu"
-      label_confirmation: "Xác nhận"
-      btn_create: "Tạo tài khoản"
+    title: "Đăng nhập"
+    label_name: "Tên"
+    label_gender: "Giới tính"
+    label_date: "Ngày sinh"
+    label_password: "Mật khẩu"
+    label_confirmation: "Xác nhận"
+    btn_create: "Tạo tài khoản"
+    edit:
+      title: "Sửa người dùng"
+      text1: "Cập nhật thông tin của bạn"
   static_pages:
     home:
       title: "Trang chủ"
