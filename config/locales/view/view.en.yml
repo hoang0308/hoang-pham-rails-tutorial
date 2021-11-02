@@ -14,14 +14,16 @@ en:
       btn_contact: "Contact"
       btn_news: "News"
   users:
-    new:
-      title: "Login"
-      label_name: "Name"
-      label_gender: "Gender"
-      label_date: "Date"
-      label_password: "Password"
-      label_confirmation: "Confirmation"
-      btn_create: "Create my account"
+    title: "Login"
+    label_name: "Name"
+    label_gender: "Gender"
+    label_date: "Date"
+    label_password: "Password"
+    label_confirmation: "Confirmation"
+    btn_create: "Create my account"
+    edit:
+      title: "Edit user"
+      text1: "Update your profile"
   static_pages:
     home:
       title: "Home"
