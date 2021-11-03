@@ -2,6 +2,8 @@ vi:
   users:
     show:
       error: "Không tìm thấy người dùng"
+    destroy:
+      flash_delete: "Người dùng đã bị xóa"
   sessions:
     create:
       error: "Sai email hoặc mật khẩu"
