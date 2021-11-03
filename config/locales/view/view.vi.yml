@@ -27,6 +27,12 @@ vi:
       btn_edit: "Lưu thay đổi"
       title: "Sửa người dùng"
       text1: "Cập nhật thông tin của bạn"
+    index:
+      title: "Tất cả người dùng"
+      text1: "Tất cả người dùng"
+    user:
+      btn_delete: "Xóa"
+      confirm: "Bạn chắc chứ?"
   static_pages:
     home:
       title: "Trang chủ"

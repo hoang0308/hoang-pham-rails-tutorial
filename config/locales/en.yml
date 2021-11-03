@@ -2,6 +2,8 @@ en:
   users:
     show:
       error: "User not found"
+    destroy:
+      flash_delte: "User deleted"
   sessions:
     create:
       error: "Invalid email/password combination"

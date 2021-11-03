@@ -27,6 +27,12 @@ en:
       btn_edit: "Save changes"
       title: "Edit user"
       text1: "Update your profile"
+    index:
+      title: "All users"
+      text1: "All users"
+    user:
+      btn_delete: "Delete"
+      confirm: "You sure?"
   static_pages:
     home:
       title: "Home"
