@@ -15,10 +15,12 @@ class User < ApplicationRecord
     
     before_save :downcase_email
 
-    def User.digest(string)
-        cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-                                                    BCrypt::Engine.cost
-        BCrypt::Password.create(string, cost: cost)
+    class << self
+        def digest(string)
+            cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
+                                                        BCrypt::Engine.cost
+            BCrypt::Password.create(string, cost: cost)
+        end
     end
         
     #return random token
@@ -54,5 +56,5 @@ class User < ApplicationRecord
         def downcase_email
             self.email.downcase
         end
-        
+
 end
