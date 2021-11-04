@@ -10,6 +10,11 @@
             <%= f.label :password, t(".label_password") %>
             <%= f.password_field :password, class: "form-control"%>
 
+            <%= f.label :remember_me, class: "chechkbox inline" do %>
+                <%= f.check_box :remember_me %>
+                <span><%= t(".check_box_remember") %></span>
+            <% end %>
+
             <%= f.submit t(".btn_login"), class: "btn btn-primary" %>
         <% end %>
 
