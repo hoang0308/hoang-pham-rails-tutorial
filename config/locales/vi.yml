@@ -1,4 +1,5 @@
 vi:
+  flash_pl_login: "Vui lòng đăng nhập"
   users:
     show:
       error: "Không tìm thấy người dùng"
