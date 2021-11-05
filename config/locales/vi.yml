@@ -4,6 +4,8 @@ vi:
       error: "Không tìm thấy người dùng"
     destroy:
       flash_delete: "Người dùng đã bị xóa"
+    create:
+      flash_activation: "Vui lòng kiểm tra lại email của bạn để kích hoạt tài khoản"
   sessions:
     create:
       error: "Sai email hoặc mật khẩu"
