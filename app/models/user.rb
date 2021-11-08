@@ -51,6 +51,7 @@ class User < ApplicationRecord
         UserMailer.account_activation(self).deliver_now
     end
 
+<<<<<<< HEAD
     class << self
         def digest(string)
             cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -82,6 +83,8 @@ class User < ApplicationRecord
         update_attribute(:remember_digest, nil)
     end
 
+=======
+>>>>>>> 90816bb (update chapter11 05/11)
     private
 
         def age_limit
