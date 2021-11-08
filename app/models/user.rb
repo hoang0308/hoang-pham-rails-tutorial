@@ -24,12 +24,6 @@ class User < ApplicationRecord
         end
     end
 
-    def User.digest(string)
-        cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
-                                                    BCrypt::Engine.cost
-        BCrypt::Password.create(string, cost: cost)
-    end
-        
     #return random token
     def User.new_token
         SecureRandom.urlsafe_base64
@@ -51,7 +45,8 @@ class User < ApplicationRecord
     end
 
     def activate
-        update_attribute(:activated, true)
+        # update_attribute(:activated, true)
+        update activated: true
         update_attribute(:activated_at, Time.zone.now)
     end
 
