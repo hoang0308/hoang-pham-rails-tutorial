@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  before_action :logged_in_user, only: [:show, :index, :edit, :update, :destroy]
+  before_action :logged_in_user, except: [:new, :create]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
-  before_action :find_user, only: [:show, :edit, :update, :destroy, :current_user]
+  before_action :find_user, only: [:show, :edit, :update, :destroy]
   
   def index
     @users = User.paginate page: params[:page]
@@ -63,12 +63,13 @@ class UsersController < ApplicationController
       unless logged_in?
         store_location
         flash[:danger] = t("flash_pl_login")
-        redirect_to login_url unless User.current_user?(@user,current_user)
+        redirect_to login_url
       end
     end
 
     def correct_user
-      redirect_to root_url unless User.current_user?(@user,current_user)
+      @user = User.find_by id: params[:id]
+      redirect_to root_url unless @user.current_user?(current_user)
     end
 
     def admin_user
