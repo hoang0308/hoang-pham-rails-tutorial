@@ -14,14 +14,25 @@ vi:
       btn_contact: "Liên hệ"
       btn_news: "Tin tức"
   users:
+    label_name: "Tên"
+    label_gender: "Giới tính"
+    label_date: "Ngày sinh"
+    label_password: "Mật khẩu"
+    label_confirmation: "Xác nhận"
+    fl_success: "Thông tin được update"
     new:
-      title: "Đăng nhập"
-      label_name: "Tên"
-      label_gender: "Giới tính"
-      label_date: "Ngày sinh"
-      label_password: "Mật khẩu"
-      label_confirmation: "Xác nhận"
+      title: "Đăng kí"
       btn_create: "Tạo tài khoản"
+    edit:
+      btn_edit: "Lưu thay đổi"
+      title: "Sửa người dùng"
+      text1: "Cập nhật thông tin của bạn"
+    index:
+      title: "Tất cả người dùng"
+      text1: "Tất cả người dùng"
+    user:
+      btn_delete: "Xóa"
+      confirm: "Bạn chắc chứ?"
   static_pages:
     home:
       title: "Trang chủ"
@@ -34,6 +45,7 @@ vi:
     errors: "Biểu mẫu bao gồm %{num} lỗi"
   sessions:
     new:
+      title: "Đăng nhập"
       t1: "Bạn có phải người mới không?"
       btn_login: "Đăng nhập"
       btn_sigup: "Đăng kí ngay!"

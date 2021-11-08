@@ -22,6 +22,10 @@ class User < ApplicationRecord
             BCrypt::Password.create(string, cost: cost)
         end
     end
+
+    def current_user?(current_user) 
+        self && self == current_user
+    end
         
     #return random token
     def User.new_token

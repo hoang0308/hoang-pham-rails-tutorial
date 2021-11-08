@@ -14,14 +14,25 @@ en:
       btn_contact: "Contact"
       btn_news: "News"
   users:
+    label_name: "Name"
+    label_gender: "Gender"
+    label_date: "Date"
+    label_password: "Password"
+    label_confirmation: "Confirmation"
+    fl_success: "Profile updated"
     new:
-      title: "Login"
-      label_name: "Name"
-      label_gender: "Gender"
-      label_date: "Date"
-      label_password: "Password"
-      label_confirmation: "Confirmation"
+      title: "Sign up"
       btn_create: "Create my account"
+    edit:
+      btn_edit: "Save changes"
+      title: "Edit user"
+      text1: "Update your profile"
+    index:
+      title: "All users"
+      text1: "All users"
+    user:
+      btn_delete: "Delete"
+      confirm: "You sure?"
   static_pages:
     home:
       title: "Home"
@@ -34,6 +45,7 @@ en:
     errors: "The form has %{num} errors"
   sessions:
     new:
+      title: "Login"
       t1: "New user?"
       btn_login: "Log in"
       btn_sigup: "Sig up now!"
