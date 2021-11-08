@@ -1,15 +1,9 @@
 class UsersController < ApplicationController
-<<<<<<< HEAD
-  before_action :logged_in_user, only: [:show, :index, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update]
-  before_action :admin_user, only: :destroy
-=======
   before_action :logged_in_user, except: [:new, :create]
   before_action :find_user, only: [:show, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
  
->>>>>>> chapter10
   
   def index
     @users = User.paginate page: params[:page]
@@ -34,19 +28,10 @@ class UsersController < ApplicationController
   end
 
   def edit
-<<<<<<< HEAD
-    @user = User.find_by id: params[:id]
-  end
-
-  def update
-    @user = User.find_by id: params[:id]
-    if @user.update(user_params)
-=======
   end
 
   def update
     if @user.update user_params
->>>>>>> chapter10
       flash[:success] = t(".fl_success")
       redirect_to @user
     else
@@ -55,11 +40,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-<<<<<<< HEAD
-    User.find(params[:id]).destroy
-=======
     @user.destroy
->>>>>>> chapter10
     flash[:success] = t(".flash_delete")
     redirect_to users_url
   end
@@ -78,7 +59,7 @@ class UsersController < ApplicationController
       unless logged_in?
         store_location
         flash[:danger] = t("flash_pl_login")
-        redirect_to login_url unless current_user?(@user)
+        redirect_to login_url
       end
     end
 
