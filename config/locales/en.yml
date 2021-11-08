@@ -1,5 +1,7 @@
 en:
+  flash_pl_login: "Please log in."
   users:
+    error: "User no found"
     show:
       error: "User not found"
     destroy:
