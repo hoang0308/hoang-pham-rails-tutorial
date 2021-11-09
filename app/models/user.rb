@@ -22,16 +22,18 @@ class User < ApplicationRecord
                                                         BCrypt::Engine.cost
             BCrypt::Password.create(string, cost: cost)
         end
+
+        def new_token
+            SecureRandom.urlsafe_base64
+        end
     end
 
     #return random token
-    def User.new_token
-        SecureRandom.urlsafe_base64
-    end
+   
 
     def remember
         self.remember_token = User.new_token
-        update_attribute(:remember_digest, User.digest(remember_token))
+        update remember_digest: User.digest(remember_token)
     end
 
     def authenticated?(attribute, token)
@@ -45,9 +47,10 @@ class User < ApplicationRecord
     end
 
     def activate
-        # update_attribute(:activated, true)
-        update activated: true
+        update_attribute(:activated, true)
         update_attribute(:activated_at, Time.zone.now)
+        # update_attributes activated: true activated_at: Time.zone.now
+        # User.update(112,{activated: true, activated_at: Time.zone.now})
     end
 
     def send_activation_email
