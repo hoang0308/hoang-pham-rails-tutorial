@@ -4,8 +4,8 @@ User.create!(name: "hoang",
     email: "hoang@gmail.com",
     password: "123456",
     password_confirmation: "123456",
-    admin: true,
-    activated: true,
+    admin: User.bools[:True],
+    activated: User.bools[:True],
     activated_at: Time.zone.now)
 99.times do |n|
     name = "hoang-#{n+1}"
@@ -19,6 +19,6 @@ User.create!(name: "hoang",
     email: email,
     password: password,
     password_confirmation: password,
-    activated: true,
+    activated: User.bools[:True],
     activated_at: Time.zone.now)
 end
