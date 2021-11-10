@@ -50,7 +50,7 @@ class User < ApplicationRecord
 
     def update_status
         self.active!
-        update activated_at: Time.zone.now
+        update status_at: Time.zone.now
     end
 
     def send_activation_email
