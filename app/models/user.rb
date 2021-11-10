@@ -2,7 +2,8 @@ class User < ApplicationRecord
     attr_accessor :remember_token, :activation_token
     VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
     enum genders: [ "Male", "Female", "N/A" ]
-    enum bools: { True: 1, False: 0 }
+    enum status: [:deactive, :active ]
+    enum user_type: [:user, :admin]
 
     validates :name, presence: true,length: {maximum: Settings.name_maximum}  #presence: true không được để trống
     validates :age, presence: true
@@ -11,7 +12,7 @@ class User < ApplicationRecord
         format: { with: VALID_EMAIL_REGEX },
         #uniqueness: {case_sensitive: false} #khong phan biet chu hoa va chu thuong
         uniqueness: true
-    validates :password, length: {minimum: Settings.password_minimum}, on: :create
+    validates :password, length: {minimum: Settings.password_minimum}, allow_nil: true
     has_secure_password
     
     before_save :downcase_email
@@ -39,7 +40,7 @@ class User < ApplicationRecord
 
     def authenticated?(attribute, token)
         digest = send("#{attribute}_digest")
-        return false if digest.nil?
+        return false if digest.nil? 
         BCrypt::Password.new(digest).is_password?(token)
     end
 
@@ -47,8 +48,9 @@ class User < ApplicationRecord
         update remember_digest: nil
     end
 
-    def activate
-        update activated: User.bools[:True], activated_at: Time.zone.now
+    def update_status
+        self.active!
+        update activated_at: Time.zone.now
     end
 
     def send_activation_email

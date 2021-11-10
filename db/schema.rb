@@ -21,10 +21,10 @@ ActiveRecord::Schema.define(version: 2021_11_05_050020) do
     t.string "gender"
     t.date "age"
     t.string "remember_digest"
-    t.integer "admin"
+    t.integer "user_type"
     t.string "activation_digest"
-    t.integer "activated"
-    t.datetime "activated_at"
+    t.integer "status"
+    t.datetime "status_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 

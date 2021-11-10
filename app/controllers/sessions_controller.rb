@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by email: params[:session][:email.downcase]
     if user && user.authenticate(params[:session][:password])
-      if user.activated?
+      if user.active?
         log_in user
         params[:session][:remember_me] == '1' ? remember(user) : forget(user)   #neu = 1 thi goi remember(user) neu khong thi goi forget(user)
         redirect_back_or user  #chuyển hướng đến trang user
