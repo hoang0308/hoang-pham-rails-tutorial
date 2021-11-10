@@ -44,7 +44,12 @@ class UsersController < ApplicationController
     flash[:success] = t(".flash_delete")
     redirect_to users_url
   end
-  
+
+  def send_user
+    @users = User.all
+    UserMailer.users_information(@users).deliver_now
+    redirect_to root_url
+  end
 
   private
 
