@@ -1,0 +1,14 @@
+<table class = "table">
+    <tr>
+        <th scope="col">User name</th>
+        <th scope="col">Gender</th>
+        <th scope="col">Date of birth</th>
+    </tr>
+    <% @users.each do |user| %>
+        <tr>
+            <td><%= user.name %></td>
+            <td><%= user.gender %></td>
+            <td><%= user.age %></td>
+        </tr>
+    <% end %>
+</table>

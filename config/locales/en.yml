@@ -6,6 +6,8 @@ en:
       error: "User not found"
     destroy:
       flash_delte: "User deleted"
+    create:
+      flash_activation: "Please check your email to activate your account"
   sessions:
     create:
       error: "Invalid email/password combination"

@@ -20,6 +20,9 @@ en:
     label_password: "Password"
     label_confirmation: "Confirmation"
     fl_success: "Profile updated"
+    fl_success_activation: "Account activated!"
+    fl_danger_activation: "Invalid activation link"
+    mess1_activation: "Account not activated. Check your email for the activation link."
     new:
       title: "Sign up"
       btn_create: "Create my account"

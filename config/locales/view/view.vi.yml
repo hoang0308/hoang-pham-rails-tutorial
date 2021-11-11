@@ -20,6 +20,9 @@ vi:
     label_password: "Mật khẩu"
     label_confirmation: "Xác nhận"
     fl_success: "Thông tin được update"
+    fl_success_activation: "Tài khoản đã được kích hoạt"
+    fl_danger_activation: "Liên kết kích hoạt không hợp lệ"
+    mess1_activation: "Tài khoản chưa được kích hoạt. Kiểm tra lại email của bạn để biết link kích hoạt"
     new:
       title: "Đăng kí"
       btn_create: "Tạo tài khoản"
