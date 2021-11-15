@@ -52,5 +52,17 @@ vi:
       t1: "Bạn có phải người mới không?"
       btn_login: "Đăng nhập"
       btn_sigup: "Đăng kí ngay!"
+      btn_forget_password: "Quên mật khẩu"
       label_password: "Mật khẩu"
       check_box_remember: "Nhớ đăng nhập trên máy này"
+      btn_forget_password: "Quên mật khẩu"
+  password_resets:
+    new:
+      title: "Quên mật khẩu"
+      text: "Quên mật khẩu"
+    create:
+      fl_reset_success: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
+      fl_reset_error: "Không tìm thấy email"
+    update:
+      fl_errors: "Không được để trống"
+      fl_success: "Mật khẩu đã được cập nhật"

@@ -52,6 +52,17 @@ en:
       t1: "New user?"
       btn_login: "Log in"
       btn_sigup: "Sig up now!"
+      btn_forget_password: "Forget password"
       check_box_remember: "Remember me on this computer"
       label_password: "Password"
-
+      btn_forget_password: "Forget password"
+  password_resets:
+    new:
+      title: "Forget password"
+      text: "Forget password"
+    create:
+      fl_reset_success: "Email sent with password reset instructions"
+      fl_reset_error: "Email address not found"
+    update:
+      fl_errors: "Can't be empty"
+      fl_success: "Password has been reset."

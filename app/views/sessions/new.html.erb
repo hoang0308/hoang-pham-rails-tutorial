@@ -10,9 +10,12 @@
             <%= f.label :password, t(".label_password") %>
             <%= f.password_field :password, class: "form-control"%>
 
+            <%= link_to t(".btn_forget_password"), new_password_reset_path , class: "btn_forget_pass"%>
+
             <%= f.label :remember_me, class: "chechkbox inline" do %>
                 <%= f.check_box :remember_me %>
                 <span><%= t(".check_box_remember") %></span>
+            
             <% end %>
 
             <%= f.submit t(".btn_login"), class: "btn btn-primary" %>

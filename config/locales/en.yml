@@ -2,6 +2,7 @@ en:
   flash_pl_login: "Please log in."
   users:
     error: "User no found"
+    error_check_expired: "Password reset has expired"
     show:
       error: "User not found"
     destroy:
