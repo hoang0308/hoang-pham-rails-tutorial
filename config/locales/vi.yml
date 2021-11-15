@@ -2,6 +2,7 @@ vi:
   flash_pl_login: "Vui lòng đăng nhập"
   users:
     error_no_find: "Không tìm thấy người dùng"
+    error_check_expired: "Mật khẩu reset đã hết hạn"
     show:
       error: "Không tìm thấy người dùng"
     destroy:
