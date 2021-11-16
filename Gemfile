@@ -10,6 +10,10 @@ gem 'bcrypt', '3.1.13'
 gem 'config'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'figaro'
+gem 'active_storage_validations'
+gem 'mini_magick', '>= 4.9.5'
+gem 'image_processing'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.4'
 # Use Puma as the app server

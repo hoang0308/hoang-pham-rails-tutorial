@@ -1,3 +1,7 @@
 name_maximum: 50
 email_maximum: 255
 password_minimum: 6
+content_maximum: 140
+image_maximum: 5.megabytes
+gmail_username: 'hoangph1234567@gmail.com'
+gmail_password: 'fixliqndkkawwwfi'

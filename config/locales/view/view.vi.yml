@@ -20,6 +20,9 @@ vi:
     label_password: "Mật khẩu"
     label_confirmation: "Xác nhận"
     fl_success: "Thông tin được update"
+    fl_success_activation: "Tài khoản đã được kích hoạt"
+    fl_danger_activation: "Liên kết kích hoạt không hợp lệ"
+    mess1_activation: "Tài khoản chưa được kích hoạt. Kiểm tra lại email của bạn để biết link kích hoạt"
     new:
       title: "Đăng kí"
       btn_create: "Tạo tài khoản"
@@ -43,11 +46,28 @@ vi:
       title: "Giúp đỡ" 
   shared:
     errors: "Biểu mẫu bao gồm %{num} lỗi"
+    user_info:
+      btn_profile: "Thông tin các nhân"
   sessions:
     new:
       title: "Đăng nhập"
       t1: "Bạn có phải người mới không?"
       btn_login: "Đăng nhập"
       btn_sigup: "Đăng kí ngay!"
+      btn_forget_password: "Quên mật khẩu"
       label_password: "Mật khẩu"
       check_box_remember: "Nhớ đăng nhập trên máy này"
+  password_resets:
+    new:
+      title: "Quên mật khẩu"
+      text: "Quên mật khẩu"
+    create:
+      fl_reset_success: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
+      fl_reset_error: "Không tìm thấy email"
+    edit:
+      title:  "Đặt lại mật khẩu"
+      btn_submit: "Đặt lại mật khẩu"
+  microposts:
+    micropost:
+      post_ago: "Đăng %{time} trước." 
+
