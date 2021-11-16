@@ -2,7 +2,9 @@ vi:
   flash_pl_login: "Vui lòng đăng nhập"
   users:
     error_no_find: "Không tìm thấy người dùng"
-    error_check_expired: "Mật khẩu reset đã hết hạn"
+    error_expired: "Đặt lại mật khẩu đã hết hạn"
+    fl_reset_success: "Mật khẩu đã được đặt lại"
+    fl_reset_error: "Mã xác nhận reset mật khẩu đã được sử dụng hoặc không đúng"
     show:
       error: "Không tìm thấy người dùng"
     destroy:
@@ -14,3 +16,30 @@ vi:
       error: "Sai email hoặc mật khẩu"
     destroy:
       error: "Bạn chưa đăng nhập"
+  microposts:
+    create:
+      flash_success: "Đăng thành công"
+    destroy:
+      flash_delete: "Bài đăng đã được xóa"
+  datetime:
+    distance_in_words:
+      less_than_x_minutes: "0 phút"
+      x_seconds:
+        one:   "1 giây"
+        other: "%{count} giây"
+      x_minutes:
+        one:   "1 phút"
+        other: "%{count} phút"
+      about_x_hours:
+        one: khoảng 1 giờ
+        other: khoảng %{count} giờ
+      x_days:
+        one:   "1 ngày"
+        other: "%{count} ngày"
+      x_months:
+        one:   "1 tháng"
+        other: "%{count} tháng"
+      x_years:
+        one:   "1 năm"
+        other: "%{count} năm"
+

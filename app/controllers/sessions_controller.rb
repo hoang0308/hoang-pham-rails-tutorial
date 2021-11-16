@@ -13,8 +13,7 @@ class SessionsController < ApplicationController
         message = t("users.mess1_activation")
         flash[:warning] = message
         redirect_to root_url
-      end
-      
+      end    
     else
       flash.now[:danger] = t(".error")
       render :new
