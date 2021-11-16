@@ -1,7 +1,7 @@
 <%= link_to gravatar_for(current_user, size: 50), current_user %>
 <h1><%= current_user.name %></h1>
  <div class="form-floating mb-3">
-    <span><%= link_to t(".btn_profile"), current_user %></span>
+    <span><%= link_to t(".btn_profile"), current_user, class: "btn btn-primary" %></span>
 </div>
  <div class="form-floating mb-3">
     <span><%= pluralize(current_user.microposts.count, "micropost") %></span>
