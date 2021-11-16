@@ -48,6 +48,9 @@ vi:
     errors: "Biểu mẫu bao gồm %{num} lỗi"
     user_info:
       btn_profile: "Thông tin các nhân"
+    micropost_form:
+      btn_post: "Đăng"
+      text_area: "Nhập bài đăng mới"
   sessions:
     new:
       title: "Đăng nhập"
@@ -67,6 +70,9 @@ vi:
     edit:
       title:  "Đặt lại mật khẩu"
       btn_submit: "Đặt lại mật khẩu"
+    update:
+      fl_success: "Thay đổi mật khẩu thành công"
+      fl_errors: "không được để trống"
   microposts:
     micropost:
       post_ago: "Đăng %{time} trước." 
