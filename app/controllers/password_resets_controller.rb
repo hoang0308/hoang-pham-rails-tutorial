@@ -14,19 +14,19 @@ class PasswordResetsController < ApplicationController
       flash[:info] = t(".fl_reset_success")
       redirect_to root_url
     else
-      flash[:danger] = t(".fl_reset_error")
-      redirect_to root_url
+      flash.now[:danger] = t(".fl_reset_error")
+      render :new
     end
   end
-
+    
   def update
-    if params[:user][:password.empty?]
-      @user.errors.add(:password, "can't be empty")
+    if params[:user][:password].empty?
+      @user.errors.add(:password, t(".fl_errors"))
       render :edit
-    elsif @user.update user_params
+    elsif @user.update(user_params)
       log_in @user
       @user.update_attribute(:reset_digest, nil)
-      flash[:success] = t("users.fl_reset_success")
+      flash[:success] = t(".fl_success")
       redirect_to @user
     else
       render :edit
@@ -59,4 +59,6 @@ class PasswordResetsController < ApplicationController
       end
     end
 
+  end
+  
 end
