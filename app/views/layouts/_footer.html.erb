@@ -1,13 +1,19 @@
-<footer class="footer">
-    <small>
-        The <a href="#">Ruby on Rails Tutorial</a>
-        by <a href="#">Michael Hartl</a>
-    </small>
-    <nav>
-        <ul>
-            <li><%= link_to t(".btn_about") , about_path %></li>
-            <li><%= link_to t(".btn_contact"), contact_path %></li>
-            <li><%= link_to t(".btn_news"), "#" %></li>
-        </ul>
-    </nav>
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+            <div class="col-auto">
+                <div class="small m-0 text-white"> 
+                    The <%= link_to "Ruby on Rails Tutorial" , "#", class: "link-light medium" %>
+                    by <%= link_to "Michael Hartl" , "#", class: "link-light medium" %>
+                </div>
+            </div>
+            <div class="col-auto">
+                <%= link_to t(".btn_about") , about_path, class: "link-light small" %>
+                <span class="text-white mx-1">&middot;</span>
+                <%= link_to t(".btn_contact"), contact_path, class: "link-light small" %>
+                <span class="text-white mx-1">&middot;</span>
+                <%= link_to t(".btn_news"), "#", class: "link-light small" %>
+            </div>
+        </div>
+    </div>
 </footer>

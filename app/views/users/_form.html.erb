@@ -1,23 +1,31 @@
 <%= form_for @user do |f| %>
     <%= render "shared/error_messages", object: f.object %>
-    
-    <%= f.label :name, t("users.label_name") %>
-    <%= f.text_field :name, class: "form-control" %>
+    <div class="form-floating mb-3">
+        <%= f.text_field :name, class: "form-control" %>
+        <%= f.label :name, t("users.label_name") %>
+    </div>
+    <div class="form-floating mb-3">
+        <%= f.select :gender,User.genders.keys, {}, class: "form-control" %>
+        <%= f.label :gender, t("users.label_gender") %>
+    </div>
+    <div class="form-floating mb-3">
+        <%= f.date_field :age, placeholder: "dd/mm/yyyy", class: "form-control" %>
+        <%= f.label :age, t("users.label_date") %>
+    </div>
+    <div class="form-floating mb-3">
+        <%= f.email_field :email, class: "form-control" %>
+        <%= f.label :email %>
+    </div>
+    <div class="form-floating mb-3">
+        <%= f.password_field :password, class: "form-control" %>
+        <%= f.label :password, t("users.label_password") %> 
+    </div>
+    <div class="form-floating mb-3">
+        <%= f.password_field :password_confirmation,  class: "form-control" %>
+        <%= f.label :password_confirmation, t("users.label_confirmation") %>
+    </div>
 
-    <%= f.label :gender, t("users.label_gender") %>
-    <%= f.select :gender, User.genders.keys, class: "form-control" %>
-
-    <%= f.label :age, t("users.label_date") %>
-    <%= f.date_field :age, placeholder: "dd/mm/yyyy", class: "form-control" %>
-
-    <%= f.label :email %>
-    <%= f.email_field :email, class: "form-control" %>
-
-    <%= f.label :password, t("users.label_password") %>
-    <%= f.password_field :password, class: "form-control" %>
-
-    <%= f.label :password_confirmation, t("users.label_confirmation") %>
-    <%= f.password_field :password_confirmation,  class: "form-control" %>
-
-    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <div class="d-grid">
+        <%= f.submit yield(:button_text), class: "btn btn-primary btn-lg", id: "submitButton" %>
+    </div>
 <% end %>

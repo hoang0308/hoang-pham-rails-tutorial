@@ -32,7 +32,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update user_params
+    if params[:user][:password.empty?]
+      @user.errors.add(:password, "can't be empty")
+      render :edit
+    elsif @user.update user_params
       flash[:success] = t(".fl_success")
       redirect_to @user
     else
