@@ -23,8 +23,11 @@
             <!-- Header-->
             <%= render "layouts/header" %>
             <!-- Features section-->
-            <section class="py-5" id="features">
+            <section class="py-3" id="features"> 
                 <div class= "container px-5">
+                    <% flash.each do |name, msg| %>
+                        <%= content_tag :div, msg, class: "alert alert-#{name}" %>
+                    <% end %>
                     <div class="bg-light rounded-3 py-5 px-4 px-md-5 mb-5">
                         <%= yield %>
                     </div>
