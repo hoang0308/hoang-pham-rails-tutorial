@@ -21,4 +21,10 @@ vi:
               too_short: "quá ngắn"
             password_confirmation:
               confirmation: "không khớp"
+        micropost:
+          attributes:
+            content:
+              blank: "không được để trống"
+            image:
+              blank: "không được để trống"
 

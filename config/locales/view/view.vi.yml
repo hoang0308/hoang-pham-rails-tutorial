@@ -46,6 +46,11 @@ vi:
       title: "Giúp đỡ" 
   shared:
     errors: "Biểu mẫu bao gồm %{num} lỗi"
+    user_info:
+      btn_profile: "Thông tin các nhân"
+    micropost_form:
+      btn_post: "Đăng"
+      text_area: "Nhập bài đăng mới"
   sessions:
     new:
       title: "Đăng nhập"
@@ -55,7 +60,6 @@ vi:
       btn_forget_password: "Quên mật khẩu"
       label_password: "Mật khẩu"
       check_box_remember: "Nhớ đăng nhập trên máy này"
-      btn_forget_password: "Quên mật khẩu"
   password_resets:
     new:
       title: "Quên mật khẩu"
@@ -63,6 +67,13 @@ vi:
     create:
       fl_reset_success: "Email được gửi kèm theo hướng dẫn đặt lại mật khẩu"
       fl_reset_error: "Không tìm thấy email"
+    edit:
+      title:  "Đặt lại mật khẩu"
+      btn_submit: "Đặt lại mật khẩu"
     update:
-      fl_errors: "Không được để trống"
-      fl_success: "Mật khẩu đã được cập nhật"
+      fl_success: "Thay đổi mật khẩu thành công"
+      fl_errors: "không được để trống"
+  microposts:
+    micropost:
+      post_ago: "Đăng %{time} trước." 
+

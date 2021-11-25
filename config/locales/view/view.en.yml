@@ -46,6 +46,11 @@ en:
       title: "Help" 
   shared:
     errors: "The form has %{num} errors"
+    user_info:
+      btn_profile: "My profile"
+    micropost_form:
+      btn_post: "Post"
+      text_area: "Compose new micropost..."
   sessions:
     new:
       title: "Login"
@@ -55,14 +60,19 @@ en:
       btn_forget_password: "Forget password"
       check_box_remember: "Remember me on this computer"
       label_password: "Password"
-      btn_forget_password: "Forget password"
   password_resets:
     new:
       title: "Forget password"
       text: "Forget password"
     create:
       fl_reset_success: "Email sent with password reset instructions"
-      fl_reset_error: "Email address not found"
+      fl_reset_error: "is not blank"
+    edit:
+      title:  "Reset Password"
+      btn_submit: "Reset Password"
     update:
-      fl_errors: "Can't be empty"
-      fl_success: "Password has been reset."
+      fl_success: "Reset password successfully"
+      fl_errors: "Reset password unsuccessfully"
+  microposts:
+    micropost:
+      post_ago: "Posted %{time} ago." 

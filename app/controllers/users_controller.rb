@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
   
   def new
@@ -31,7 +32,10 @@ class UsersController < ApplicationController
   end
 
   def update
-    if @user.update user_params
+    if params[:user][:password.empty?]
+      @user.errors.add(:password, "can't be empty")
+      render :edit
+    elsif @user.update user_params
       flash[:success] = t(".fl_success")
       redirect_to @user
     else
@@ -58,14 +62,6 @@ class UsersController < ApplicationController
                                   :password_confirmation, :age, :gender)
       # tra ve 1 version params hash voi cac attributes trong permit
       # va se phat sinh error neu :user attribute loi
-    end
-
-    def logged_in_user
-      unless logged_in?
-        store_location
-        flash[:danger] = t("flash_pl_login")
-        redirect_to login_url
-      end
     end
 
     def correct_user
