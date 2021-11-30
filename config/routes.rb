@@ -13,9 +13,8 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   get '/users/sendusers', to: 'users#send_user'
   resources :users do
-    member do
-      get :followings, :followers
-    end
+    get '/following', to: 'following#show'
+    get '/followers', to: 'followers#show'
   end
   resources :account_activations, only: [:edit]
   resources :password_resets, only: [:new, :create, :edit, :update]
