@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-    before_action :in_micropost, only: [:new, :create,:index]
+    before_action :find_micropost, only: [:new, :create, :index]
     before_action :correct_user, only: :destroy
 
     def new
@@ -21,8 +21,6 @@ class CommentsController < ApplicationController
     end
 
     def destroy
-        @micropost = Micropost.find_by(id: @comment.micropost_id)
-        @id_temp = @comment.id
         @comment.destroy
         respond_to do |format|
             format.html { redirect_to root_path }
@@ -36,7 +34,7 @@ class CommentsController < ApplicationController
             params.require(:comment).permit(:content,:parent_comment_id)          
         end
 
-        def in_micropost
+        def find_micropost
             @micropost = Micropost.find_by(id: params[:micropost_id])
         end
 
