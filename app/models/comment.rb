@@ -11,7 +11,9 @@ class Comment < ApplicationRecord
 
     
 
-    def show_sub_comment
-        self.sub_comments
-    end
+    # def show_sub_comment
+    #     self.sub_comments
+    # end
+    scope :sub_comments, ->{where parent: id}
+
 end

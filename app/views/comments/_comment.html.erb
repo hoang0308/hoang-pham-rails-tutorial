@@ -16,7 +16,7 @@
                                     data: { confirm: "You sure?" } %>
             <% end %>
             <div id="micropost_<%= "#{micropost.id}_show_sub_comment_#{comment.id}" %>">
-                <% @comments = comment.show_sub_comment.paginate(page: params[:page]) %>
+                <% @comments = comment.sub_comments.paginate(page: params[:page]) %>
                 <ul id="list_comment_micropost_<%= micropost.id %>" class="list-unstyled">
                     <% if @comments.any? %>
                         <%= render partial: "comments/comment", collection: @comments %>     
